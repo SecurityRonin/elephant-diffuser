@@ -58,7 +58,7 @@ fuzzed, and validated against real data — is how the exception stays disciplin
 
 ## Trust but verify
 
-- **`#![forbid(unsafe_code)]`, panic-free, zero dependencies.** No `unwrap`/`expect`
+- **`#![forbid(unsafe_code)]`, panic-free by lint, zero dependencies.** No `unwrap`/`expect`
   in production; every index is computed with underflow-free modular arithmetic, so
   the transform never panics on any input length. A `cargo-fuzz` target drives
   `decrypt`/`encrypt` over arbitrary bytes with the "must not panic" invariant.
