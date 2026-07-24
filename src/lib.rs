@@ -32,8 +32,11 @@ const RA: [u32; 4] = [9, 0, 13, 0];
 const RB: [u32; 4] = [0, 10, 0, 25];
 
 /// Split a sector into little-endian 32-bit words. Trailing bytes that do not
-/// fill a word are dropped (they are XOR-mixed but not diffused, matching the
-/// reference), so the transform touches `sector.len() / 4` words.
+/// fill a word are dropped from the diffused words (the per-sector-key XOR in
+/// [`decrypt`]/[`encrypt`] still covers them), so the transform touches
+/// `sector.len() / 4` words. Real BitLocker sectors are word-aligned, so a
+/// sub-word remainder only arises for out-of-spec inputs the reference never
+/// specifies.
 fn to_words(sector: &[u8]) -> Vec<u32> {
     sector
         .chunks_exact(4)
