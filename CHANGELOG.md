@@ -6,6 +6,14 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.1](https://github.com/SecurityRonin/elephant-diffuser/compare/elephant-diffuser-v0.1.0...elephant-diffuser-v0.1.1) - 2026-07-24
+
+### Documentation
+
+- reverse-write PRD + ADRs; mkdocs excludes governance docs (fleet standard)
+- *(readme)* align robustness wording with fleet standard (fuzzed + panic-free-by-lint pairing)
+- use verbatim Apache-2.0 license text
+
 ## [0.1.0]
 
 ### Added
