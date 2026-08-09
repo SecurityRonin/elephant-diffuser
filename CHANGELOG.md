@@ -6,6 +6,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.2](https://github.com/SecurityRonin/elephant-diffuser/compare/elephant-diffuser-v0.1.1...elephant-diffuser-v0.1.2) - 2026-08-09
+
+### Fixed
+
+- *(gitignore)* unanchor the target rule so nested cargo projects are ignored
+
 ## [0.1.1](https://github.com/SecurityRonin/elephant-diffuser/compare/elephant-diffuser-v0.1.0...elephant-diffuser-v0.1.1) - 2026-07-25
 
 ### Documentation
